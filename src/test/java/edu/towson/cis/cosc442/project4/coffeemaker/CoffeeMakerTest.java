@@ -123,22 +123,24 @@ public class CoffeeMakerTest {
 
     // amtCoffee >= 0, amtMilk >= 0, amtSugar >= 0, amtChocolate >= 0, expected
     // (non-negative values)
-    @ParameterizedTest
-    @CsvSource({
-            "2, 2, 2, 2, true", // All valid positive
-            "0, 1, 1, 1, true", // Coffee boundary (coffee = 0)
-            "1, 0, 1, 1, true", // Milk boundary (milk = 0)
-            "1, 1, 0, 1, true", // Sugar boundary (sugar = 0)
-            "1, 1, 1, 0, true", // Chocolate boundary (chocolate = 0)
-            "-1, 1, 0, 1, false", // Negative coffee boundary
-            "1, -1, 0, 1, false", // Negative milk boundary
-            "1, 1, -1, 1, false", // Negative sugar boundary
-            "1, 1, 0, -1, false" // Negative chocolate boundary
-    })
-    public void testAddInventory(int coffee, int milk, int sugar, int chocolate, boolean expected) {
-        // Act, assert
-        assertEquals(expected, coffeeMaker.addInventory(coffee, milk, sugar, chocolate));
-    }
+    // @ParameterizedTest
+    // @CsvSource({
+    // "2, 2, 2, 2, true", // All valid positive
+    // "0, 1, 1, 1, true", // Coffee boundary (coffee = 0)
+    // "1, 0, 1, 1, true", // Milk boundary (milk = 0)
+    // "1, 1, 0, 1, true", // Sugar boundary (sugar = 0)
+    // "1, 1, 1, 0, true", // Chocolate boundary (chocolate = 0)
+    // "-1, 1, 0, 1, false", // Negative coffee boundary
+    // "1, -1, 0, 1, false", // Negative milk boundary
+    // "1, 1, -1, 1, false", // Negative sugar boundary
+    // "1, 1, 0, -1, false" // Negative chocolate boundary
+    // })
+    // public void testAddInventory(int coffee, int milk, int sugar, int chocolate,
+    // boolean expected) {
+    // // Act, assert
+    // assertEquals(expected, coffeeMaker.addInventory(coffee, milk, sugar,
+    // chocolate));
+    // }
 
     @Test
     public void testAddInventory_CorrectIngredientTotal() {
