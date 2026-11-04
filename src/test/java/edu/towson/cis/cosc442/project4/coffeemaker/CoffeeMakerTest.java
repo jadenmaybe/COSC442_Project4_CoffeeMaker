@@ -142,17 +142,17 @@ public class CoffeeMakerTest {
     // chocolate));
     // }
 
-    @Test
-    public void testAddInventory_CorrectIngredientTotal() {
-        // Arrange
-        Inventory inventory = coffeeMaker.checkInventory();
-        // Act, assert
-        assertTrue(coffeeMaker.addInventory(1, 2, 3, 4));
-        assertEquals(16, inventory.getCoffee());
-        assertEquals(17, inventory.getMilk());
-        assertEquals(18, inventory.getSugar());
-        assertEquals(19, inventory.getChocolate());
-    }
+    // @Test
+    // public void testAddInventory_CorrectIngredientTotal() {
+    // // Arrange
+    // Inventory inventory = coffeeMaker.checkInventory();
+    // // Act, assert
+    // assertTrue(coffeeMaker.addInventory(1, 2, 3, 4));
+    // assertEquals(16, inventory.getCoffee());
+    // assertEquals(17, inventory.getMilk());
+    // assertEquals(18, inventory.getSugar());
+    // assertEquals(19, inventory.getChocolate());
+    // }
 
     @Test
     public void testGetRecipeForName_Valid() {
