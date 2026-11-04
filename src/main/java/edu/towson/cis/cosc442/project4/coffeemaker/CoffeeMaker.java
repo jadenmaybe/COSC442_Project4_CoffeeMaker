@@ -119,7 +119,7 @@ public class CoffeeMaker {
         } else {
             inventory.setCoffee(inventory.getCoffee() + amtCoffee);
             inventory.setMilk(inventory.getMilk() + amtMilk);
-            inventory.setSugar(inventory.getSugar() - amtSugar); // Task 4 Step 1: Change from + to -
+            inventory.setSugar(inventory.getSugar() + amtSugar);
             inventory.setChocolate(inventory.getChocolate() + amtChocolate);
         }
         return canAddInventory;
